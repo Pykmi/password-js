@@ -16,31 +16,23 @@
     <!-- FONT AWESOME -->
     <link href="css/all.css" rel="stylesheet">
 
-    <!-- LOCAL STYLES -->
-    <style>
-        body {
-            font-family: "Glacial Indifference", sans-serif;
-        }
+    <!-- CLIPBOARD.JS -->
+    <script src="js/clipboard.min.js"></script>
 
-        .H1 {
-            font-size: 3rem;
-            text-align: center;
-        }
+    <!-- LOCAL STYLES & JS -->
+    <link href="local.css" rel="stylesheet">
 
-        .container {
-            width: 800px;
-            margin-left: calc((100% - 800px) / 2);
-            margin-right: calc((100% - 800px) / 2);
-        }
-    </style>
-
-    <title>Boilerplate</title>
+    <title>Password Generator</title>
 </head>
 <body>
 
-<div class="container">
-    <div class="H1">AaBbCcDdEeFfGgHhIiJjKkLlMmNn</div>
+<div id="container">
+    <div id="content">
+        <div class="H1">Password Generator</div>
+        <div id="password" data-clipboard-action="copy" data-clipboard-target="#password">73nSJcTTpy7rMbYCNkEuhiC2ou5UCn</div>
+    </div>
 </div>
 
 </body>
+<script src="password.js"></script>
 </html>
