@@ -2,23 +2,19 @@
     const CHARS = "abcdefghijklmnopqrstuyvwxzABCDEFGHIJKLMNOPQRSTUYVWXZ1234567890";
     const MAX_LENGTH = 30;
 
-    function generate() {
-        let password = "";
+    /**
+     * Generate password.
+     */
+    const generate = () => (
+        Array.from({ length: MAX_LENGTH })
+            .map(() => select())
+            .reduce((pass, val) => pass += val)
+    );
 
-        for(let i=0; i<MAX_LENGTH; i++) {
-            password += pick();
-        }
-
-        return password;
-    }
-
-    function pick() {
-        return CHARS[random(CHARS.length-1)];
-    }
-
-    function random(max) {
-        return Math.floor(Math.random() * Math.floor(max));
-    }
+    /**
+     * Select a random character for the new password.
+     */
+    const select = () => CHARS[Math.floor(Math.random() * Math.floor(CHARS.length-1))];
 
     /**
      * Use clipboard.js to copy the generated password to user's clipboard.
