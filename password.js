@@ -24,6 +24,13 @@
     clipboard.on("success", function(e) {
         document.getSelection().removeAllRanges();      // remove all selections from the page
         console.info("Successfully copied password to your clipboard.");
+
+        $("#password").css("color", "#50001D");
+        $("#password").text("Copied to Clipboard!");
+        setTimeout(() => {
+            $("#password").text(e.text);
+            $("#password").css("color", "#000");
+        }, 3000);
     });
 
     /**
