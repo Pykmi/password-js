@@ -1,4 +1,4 @@
-(function(B, $) {
+(function($) {
     const CHARS = "abcdefghijklmnopqrstuyvwxzABCDEFGHIJKLMNOPQRSTUYVWXZ1234567890";
     const MAX_LENGTH = 30;
     const REFRESH_RATE = 5000;
